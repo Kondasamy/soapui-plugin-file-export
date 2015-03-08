@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: swingx:swingx:soapui">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/swingx/swingx/soapui/swingx-soapui.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/swingx/swingx/soapui/swingx-soapui-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/swingx/swingx/soapui/swingx-soapui-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tns:soapui-actions xmlns:tns="http://eviware.com/soapui/config">
+
+    <tns:action id="TestStepSaveResponseAction" actionClass="com.kondasamy.soapui.plugins.exportResponseGroovy.TestStepSaveResponseAction"/>
+    <tns:action id="TestCaseSaveResponseAction" actionClass="com.kondasamy.soapui.plugins.exportResponseGroovy.TestCaseSaveResponseAction"/>
+    <tns:action id="TestSuiteSaveResponseAction" actionClass="com.kondasamy.soapui.plugins.exportResponseGroovy.TestSuiteSaveResponseAction"/>
+    <tns:action id="ProjectSaveResponseAction" actionClass="com.kondasamy.soapui.plugins.exportResponseGroovy.ProjectSaveResponseAction"/>
+
+    <tns:actionGroup id="RestTestRequestStepActions">
+        <tns:actionMapping actionId="TestStepSaveResponseAction" position="BEFORE" positionRef="RenameTestCaseAction"/>
+    </tns:actionGroup>
+
+    <tns:actionGroup id="HttpTestRequestStepActions">
+        <tns:actionMapping actionId="TestStepSaveResponseAction" position="BEFORE" positionRef="RenameTestCaseAction"/>
+    </tns:actionGroup>
+
+    <tns:actionGroup id="WsdlTestRequestStepActions">
+        <tns:actionMapping actionId="TestStepSaveResponseAction" position="BEFORE" positionRef="RenameTestCaseAction"/>
+    </tns:actionGroup>
+
+    <tns:actionGroup id="WsdlTestCaseActions">
+        <tns:actionMapping actionId="TestCaseSaveResponseAction"/>
+    </tns:actionGroup>
+
+    <tns:actionGroup id="TestCaseActions">
+        <tns:actionMapping actionId="TestCaseSaveResponseAction"/>
+    </tns:actionGroup>
+
+    <tns:actionGroup id="WsdlTestSuiteActions">
+        <tns:actionMapping actionId="TestSuiteSaveResponseAction"/>
+    </tns:actionGroup>
+
+    <tns:actionGroup id="TestSuiteActions">
+        <tns:actionMapping actionId="TestSuiteSaveResponseAction"/>
+    </tns:actionGroup>
+
+    <tns:actionGroup id="EnabledWsdlProjectActions">
+        <tns:actionMapping actionId="ProjectSaveResponseAction"/>
+    </tns:actionGroup>
+
+    <tns:actionGroup id="WsdlProjectActions">
+        <tns:actionMapping actionId="ProjectSaveResponseAction"/>
+    </tns:actionGroup>
+
+    <tns:actionGroup id="ProjectActions">
+        <tns:actionMapping actionId="ProjectSaveResponseAction"/>
+    </tns:actionGroup>
+
+</tns:soapui-actions>

@@ -1,0 +1,4 @@
+com\kondasamy\soapui\plugins\exportResponseGroovy\TestSuiteSaveResponseAction.class
+com\kondasamy\soapui\plugins\exportResponseGroovy\ProjectSaveResponseAction.class
+com\kondasamy\soapui\plugins\exportResponseGroovy\TestStepSaveResponseAction.class
+com\kondasamy\soapui\plugins\exportResponseGroovy\TestCaseSaveResponseAction.class
