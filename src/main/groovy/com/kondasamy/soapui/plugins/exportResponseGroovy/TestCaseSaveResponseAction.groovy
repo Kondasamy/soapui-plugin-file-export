@@ -39,6 +39,7 @@ class TestCaseSaveResponseAction extends AbstractSoapUIAction<TestCase>
                             def rawResponse = new String(response.getRawResponseData(),"UTF-8")
                             def tstName = tests.getName()
                             def tcName = tests.testCase.getName()
+                            def tsName = tests.testCase.testSuite.getName()
                             def projName = tests.testCase.testSuite.project.name
 
                             def today= new Date()
@@ -55,24 +56,24 @@ class TestCaseSaveResponseAction extends AbstractSoapUIAction<TestCase>
                             String fileName6 = fileName5.replaceAll("-","_")
 
                             def mainDir = System.getProperty('user.home')
-                            def SubDir = "\\SoapUI Data\\"+projName
+                            def SubDir = "\\SoapUI Data\\"+projName+"\\"+tsName
                             def SubDir1 = new File(mainDir,SubDir)
-                            SubDir1.mkdirs()
-                            if(!SubDir1.exists())
+                            //SubDir1.mkdirs()
+                            if(SubDir1.exists())
                             {
                                 def file = new File(SubDir1,fileName6)
                                 if(!file.exists())
-                                    file.append "Raw Request:" + System.getProperty("line.separator") + rawRequest+System.getProperty("line.separator")+System.getProperty("line.separator") + "Raw Response"+ System.getProperty("line.separator")+ rawResponse
+                                    file.append "Raw Request:" + System.getProperty("line.separator") + rawRequest+System.getProperty("line.separator")+System.getProperty("line.separator") + "Raw Response :"+ System.getProperty("line.separator")+ rawResponse
                                 else
-                                    file << "Raw Request:" + System.getProperty("line.separator") +  rawRequest+System.getProperty("line.separator")+System.getProperty("line.separator") + "Raw Response"+ System.getProperty("line.separator")+ rawResponse
+                                    file << "Raw Request:" + System.getProperty("line.separator") +  rawRequest+System.getProperty("line.separator")+System.getProperty("line.separator") + "Raw Response :"+ System.getProperty("line.separator")+ rawResponse
                             }
                             else
                             {
                                 SubDir1.mkdirs()
                                 def file = new File(SubDir1,fileName6)
-                                file << "Raw Request:" + System.getProperty("line.separator") +  rawRequest+System.getProperty("line.separator")+System.getProperty("line.separator") + "Raw Response"+ System.getProperty("line.separator")+ rawResponse
+                                file << "Raw Request:" + System.getProperty("line.separator") +  rawRequest+System.getProperty("line.separator")+System.getProperty("line.separator") + "Raw Response :"+ System.getProperty("line.separator")+ rawResponse
                             }
-                            SoapUI.log.info "Raw Request and Raw Response is exported to a file :: "+mainDir+ SubDir+"\\"+fileName6
+                            SoapUI.log.info "***Raw Request and Raw Response is exported to a file :: ==> "+mainDir+ SubDir+"\\"+fileName6
 
                         }
 
@@ -98,6 +99,7 @@ class TestCaseSaveResponseAction extends AbstractSoapUIAction<TestCase>
                             def rawResponse = new String(response.getRawResponseData(),"UTF-8")
                             def tstName = tests.getName()
                             def tcName = tests.testCase.getName()
+                            def tsName = tests.testCase.testSuite.getName()
                             def projName = tests.testCase.testSuite.project.name
 
                             def today= new Date()
@@ -114,24 +116,24 @@ class TestCaseSaveResponseAction extends AbstractSoapUIAction<TestCase>
                             String fileName6 = fileName5.replaceAll("-","_")
 
                             def mainDir = System.getProperty('user.home')
-                            def SubDir = "\\SoapUI Data\\"+projName
+                            def SubDir = "\\SoapUI Data\\"+projName+"\\"+tsName
                             def SubDir1 = new File(mainDir,SubDir)
-                            SubDir1.mkdirs()
-                            if(!SubDir1.exists())
+//                            SubDir1.mkdirs()
+                            if(SubDir1.exists())
                             {
                                 def file = new File(SubDir1,fileName6)
                                 if(!file.exists())
-                                    file.append "Raw Request:" + System.getProperty("line.separator") + rawRequest+System.getProperty("line.separator")+System.getProperty("line.separator") + "Raw Response"+ System.getProperty("line.separator")+ rawResponse
+                                    file.append "Raw Request:" + System.getProperty("line.separator") + rawRequest+System.getProperty("line.separator")+System.getProperty("line.separator") + "Raw Response :"+ System.getProperty("line.separator")+ rawResponse
                                 else
-                                    file << "Raw Request:" + System.getProperty("line.separator") + rawRequest+System.getProperty("line.separator")+System.getProperty("line.separator") + "Raw Response"+ System.getProperty("line.separator")+ rawResponse
+                                    file << "Raw Request:" + System.getProperty("line.separator") + rawRequest+System.getProperty("line.separator")+System.getProperty("line.separator") + "Raw Response :"+ System.getProperty("line.separator")+ rawResponse
                             }
                             else
                             {
                                 SubDir1.mkdirs()
                                 def file = new File(SubDir1,fileName6)
-                                file << "Raw Request:" + System.getProperty("line.separator") + rawRequest+System.getProperty("line.separator")+System.getProperty("line.separator") + "Raw Response"+ System.getProperty("line.separator")+ rawResponse
+                                file << "Raw Request:" + System.getProperty("line.separator") + rawRequest+System.getProperty("line.separator")+System.getProperty("line.separator") + "Raw Response :"+ System.getProperty("line.separator")+ rawResponse
                             }
-                            SoapUI.log.info "Raw Request and Raw Response is exported to a file :: "+mainDir+ SubDir+"\\"+fileName6
+                            SoapUI.log.info "***Raw Request and Raw Response is exported to a file :: ==>"+mainDir+ SubDir+"\\"+fileName6
 
                         }
 
