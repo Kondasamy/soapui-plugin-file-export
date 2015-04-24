@@ -10,10 +10,14 @@ This plugin helps to export Raw Request and Raw Response of the SOAP/ REST/ HTTP
 ### How to install the Plugin? ###
 The user needs to place the JAR file (soapui-plugin-file-export-1.0.0-plugin.jar), into the SoapUI Installation folder location %SoapUI Install Directory%\bin\plugins a shown below,
 
+![foldre location](https://cloud.githubusercontent.com/assets/5390252/7325057/3f523b38-ead9-11e4-8716-9791c620bb57.png)
+
 **Note:** The ‘plugins’ folder should be manually created if it doesn’t exist.
  
 ### How to Test the installation? ###
 SoapUI needs to be restarted after installing the plugin. After SoapUI is opened, check the SoapUI Log for the traces of information stating the success of Plugin installation as below,
+
+![Initial Loading](https://cloud.githubusercontent.com/assets/5390252/7325090/73ac03be-ead9-11e4-8010-6ca427e7048a.png)
 
 ### How to use the Plugin? ###
 
@@ -21,11 +25,19 @@ SoapUI needs to be restarted after installing the plugin. After SoapUI is opened
 
 For Instance, if the user right clicks a TestSuite, the above action will be provided as below,
 
+![tesuite action](https://cloud.githubusercontent.com/assets/5390252/7325153/eb26a052-ead9-11e4-892f-b2ca12893ddb.png)
+
 2)	After clicking the option, the plugin will loop and inspect through the SOAP/ REST/ HTTP teststeps and export to the Current User’s default folder location which will be published in the SoapUI log on successful attempts as shown in the below image,
+
+![log](https://cloud.githubusercontent.com/assets/5390252/7325180/21601f40-eada-11e4-9f98-9ac5799c95b9.png)
 
 3)	On successful completion, a popup will be displayed stating the completion as below,
 
+![pop](https://cloud.githubusercontent.com/assets/5390252/7325165/0d797a62-eada-11e4-8f1a-675fbe54ac58.png)
+
 4)	The user can navigate to the folder location stated in the SoapUI Log and could see the exported files,
+
+![request](https://cloud.githubusercontent.com/assets/5390252/7325189/37a194a0-eada-11e4-9874-4cae3ce7c019.png)
 
 Note: For the TestStep’s not ran or having null response, appropriate message will be logged in SoapUI Log.
 
