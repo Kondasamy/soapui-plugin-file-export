@@ -1,6 +1,7 @@
 # SoapUI plugin - To export Request and Response to file/s#
 SoapUI OS/ Pro plugin - Used for exporting Request and Response from Project, TestSuite, TestCase and TestStep level.
 
+Download Java Archive (JAR): [Here](https://github.com/Kondasamy/soapui-plugin-file-export/releases "Plugin download link")
 
 ### **About the Plugin:**###
 **SoapUI** – *“Export Request & Response Plugin”* is basically a Java Archive file (JAR), which has been coded to extend the capability of Core SoapUI functionalities. This plugin is basically compatible for/ from the version of SoapUI 4.5.0 till 5.1.2, no matter it is Open Source or Pro.
